@@ -23,6 +23,17 @@
 
   <dependencies>
     <dependency>
+      <!-- 
+        Fixes a latent 'not found' bytecode reference flagged by jdeps.
+        This library is omitted from the transitive metadata of certain upstream 
+        dependencies (like Guava), but its annotations remain in the bytecode.
+        This allows jdeps to run cleanly.
+      -->
+      <groupId>com.google.j2objc</groupId>
+      <artifactId>j2objc-annotations</artifactId>
+      <version>3.1</version>
+    </dependency>
+    <dependency>
       <groupId>com.raelity.3rdparty.com.glazedlists</groupId>
       <artifactId>glazedlists</artifactId>
     </dependency>
