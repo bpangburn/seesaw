@@ -26,8 +26,7 @@ import org.netbeans.validation.api.ui.swing.SwingValidationGroup;
 
 /**
  * Hook into SimpleValidation framework; validate on demand, not as a listener.
- * Useful for the way SwingSet splits validation and decoration.
- * @author Tim Boudreau
+ * Useful for the way seesaw splits validation and decoration.
  */
 // TODO: Make this independent of Document, just use a string?
 //		 Set the string on every change to text, after change needs validation?

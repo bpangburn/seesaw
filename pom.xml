@@ -74,7 +74,7 @@
     <group_abbrev>visdb</group_abbrev>
 
     <snippet_path>
-      ${maven.multiModuleProjectDirectory}/seesaw/src/test/java/snippet_files
+      ${maven.multiModuleProjectDirectory}/seesaw-demo/src/test/java/snippet_files
     </snippet_path>
 
     <!-- Toolchain -->
@@ -470,6 +470,7 @@
             <doclint>all,-missing,-html</doclint>
             <links>
               <link>https://javadoc.io/static/com.raelity.3rdparty.com.glazedlists/glazedlists/${version.glazedlists}</link>
+              <link>https://errael.github.io/simplevalidation</link>
             </links>
           </configuration>
           <executions>

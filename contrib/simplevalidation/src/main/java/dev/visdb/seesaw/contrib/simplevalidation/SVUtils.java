@@ -47,6 +47,7 @@ import org.netbeans.validation.api.Problems;
 import org.netbeans.validation.api.Validator;
 import org.netbeans.validation.api.ValidatorUtils;
 import org.netbeans.validation.api.conversion.Converter;
+import org.netbeans.validation.api.ui.ValidationGroup;
 import org.netbeans.validation.api.ui.ValidationItem;
 import org.netbeans.validation.api.ui.ValidationStrategy;
 import org.netbeans.validation.api.ui.swing.SwingComponentDecorationFactory;
@@ -88,7 +89,13 @@ public class SVUtils {
     };
   }
 
-  public static ValidationItem decorator(JTextComponent jtc, StringValidator sval) {
+  /**
+   * Set both decorator and pluginValidator on the SsComponent.
+   * @param jtc must be an SsComponent.
+   * @param sval
+   * @return ValidationItem to assign to the {@link ValidationGroup}.
+   */
+  public static ValidationItem setDecoratorValidator(JTextComponent jtc, StringValidator sval) {
     SsComponent comp = (SsComponent) jtc;
     TextComponentValidationItem textVali = SVUtils.createDefaultTextValidator(jtc, sval);
     SimpleValValidatorDecorator deco = new SimpleValValidatorDecorator(textVali);

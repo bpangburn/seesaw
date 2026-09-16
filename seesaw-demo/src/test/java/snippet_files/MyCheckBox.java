@@ -38,8 +38,8 @@ public class MyCheckBox extends JCheckBox implements SsComponent {
       try {
         dbChange(() -> setColumnObject( isSelected())); // @link substring="setColumnObject" target="SsComponent#setColumnObject" @link substring="dbChange" target="SsComponent#dbChange"
       } catch (SQLException ex) {
-        log(xxx);
-      } // @replace regex='xxx' replacement="..."
+        log(xxx); // @replace regex='xxx' replacement="..."
+      }
     }
   }
   MyCheckBox() {

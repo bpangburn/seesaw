@@ -142,10 +142,13 @@ public class Example2 extends JFrame {
     ValidationItem decoSupplierCity = null;
     if (USE_SIMPLE_VALIDATION) {
       SwingValidationGroup.setComponentName(txtSupplierName, "Supplier Name");
-      decoSupplierName = SVUtils.decorator(txtSupplierName, SVUtils.getStringValidator(
-          validateSupplierName, () -> "Supplier name can not end with 'oops..'"));
-      decoSupplierCity = SVUtils.decorator(txtSupplierCity, SVUtils.getStringValidator(
-          validateSupplierCity, () -> "City can not end in 'X'"));
+      decoSupplierName = SVUtils.setDecoratorValidator(txtSupplierName,
+          SVUtils.getStringValidator(
+                  validateSupplierName, () -> "Supplier name can not end with 'oops..'"));
+      SwingValidationGroup.setComponentName(txtSupplierCity, "Supplier City");
+      decoSupplierCity = SVUtils.setDecoratorValidator(txtSupplierCity,
+          SVUtils.getStringValidator(
+                  validateSupplierCity, () -> "City can not end in 'X'"));
     } else {
       txtSupplierName.setPluginValidator(TextComponentValidator.create(validateSupplierName));
       txtSupplierCity.setPluginValidator(
