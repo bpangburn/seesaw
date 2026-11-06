@@ -1,5 +1,8 @@
-### (documentation in progress)
 # Seesaw database aware components
+
+For Maven, Eclipse (m2e), and NetBeans setup, see [IDE_SETUP.md](IDE_SETUP.md).
+
+### (documentation in progress)
 
 [javadoc](https://visdb-dev.github.io/seesaw/).
 

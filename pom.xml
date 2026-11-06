@@ -90,7 +90,7 @@
     <java-release>25</java-release>
     <!-- source/target for using frgaal -->
     <frgaal.version>25.0.0</frgaal.version>
-    <java-source>24</java-source>
+    <java-source>25</java-source>
     <java-target>17</java-target>
 
     <!-- Dependencies -->

@@ -1,2 +1,39 @@
-/target/
-/.flattened-pom.xml
+# Maven build output (patterns apply throughout all modules)
+target/
+.flattened-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Eclipse / m2e generated project metadata
+.project
+.classpath
+.factorypath
+.metadata/
+bin/
+
+# Generated Eclipse preferences only.
+# Retain and track .settings/org.eclipse.jdt.core.prefs and
+# .settings/org.eclipse.jdt.ui.prefs where customized.
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.m2e.core.prefs
+
+# NetBeans generated project metadata
+nbproject/
+# Intentionally NOT ignoring nbactions.xml or nb-configuration.xml:
+# See IDE_SETUP.md for custom settings retained in Git.
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
