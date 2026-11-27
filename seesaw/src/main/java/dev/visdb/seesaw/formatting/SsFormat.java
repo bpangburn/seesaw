@@ -89,8 +89,7 @@ public enum SsFormat {
     return switch (format.getType()) {
       case DATE -> DATE_MMDDYYYY_SLASH;
       case TIME -> TIME_HHMMSS;
-      //case TIMESTAMP -> TIMESTAMP_YYYYMMDD_HHMMSS;
-      case TIMESTAMP -> TIMESTAMP_YYYYMMDD_STROKE_HHMMSS_SSSZ;
+      case TIMESTAMP -> TIMESTAMP_YYYYMMDD_STROKE_HHMMSS;
       default -> format; // XXX
     };
   }

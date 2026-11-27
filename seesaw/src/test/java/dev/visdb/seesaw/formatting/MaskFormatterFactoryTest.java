@@ -195,6 +195,24 @@ public class MaskFormatterFactoryTest {
     }
   }
 
+  @Test
+  public void testDefaultTimestampRoundTrip() throws Exception {
+    javax.swing.SwingUtilities.invokeAndWait(() -> {
+      SsTimestampField field = new SsTimestampField() {
+        @Override
+        public java.sql.JDBCType getColumnJDBCType() {
+          return java.sql.JDBCType.TIMESTAMP;
+        }
+      };
+      java.sql.Timestamp timestamp = java.sql.Timestamp.valueOf("2026-11-23 10:15:30");
+      field.setValue(timestamp);
+      assertEquals("2026-11-23 10:15:30", field.getText());
+      assertTrue(dev.visdb.seesaw.datasources.DateTime.dateTimeColumnValidate(
+          field.getText(), field));
+      assertDoesNotThrow(() -> field.getFormatter().stringToValue(field.getText()));
+    });
+  }
+
   /** x */
   @Test
   @SuppressWarnings("UseOfSystemOutOrSystemErr")
