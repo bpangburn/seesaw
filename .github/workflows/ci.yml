@@ -20,12 +20,12 @@ jobs:
     name: Build and test (JDK ${{ matrix.java }})
     runs-on: ubuntu-latest
 
-    # frgaal compiles source 24 to target 17 on any of these JDKs, and the
-    # tests then run on that same JDK. 17 is the minimum runtime.
+    # frgaal compiles source 24 to target 17; tests run on JDK 21 and 25.
+    # Java 17 remains the minimum runtime, but is not directly tested in this matrix.
     strategy:
       fail-fast: false
       matrix:
-        java: [ '17', '21', '25' ]
+        java: [ '21', '25' ]
 
     steps:
       - name: Checkout Code
